@@ -10,7 +10,7 @@ import { OcorrenciasModule } from './ocorrencias/ocorrencias.module';
     ConfigModule.forRoot({ 
       isGlobal: true,
     }),
-    MongooseModule.forRoot(`mongodb+srv://estousegurodb:${process.env.DATABASE_PASSWORD}@cluster0.zxnof.mongodb.net/myFirstDatabase?retryWrites=true&w=majority`),
+    MongooseModule.forRoot(`mongodb+srv://${process.env.DATABASE_USER}:${process.env.DATABASE_PASSWORD}@cluster0.zxnof.mongodb.net/myFirstDatabase?retryWrites=true&w=majority`),
     OcorrenciasModule
   ],
   controllers: [AppController],
